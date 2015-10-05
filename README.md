@@ -7,7 +7,7 @@ Simple iot javascript example based on
 3. Client 2 (MQTT.js client)
 4. Client Web (MQTT.js client over websocket) 
 
-more info on [my blog](http://www.pensando.it/ "Etrusco's blog")
+more info on [my blog](http://www.pensando.it/wp/2015/10/tech/iot-e-javascript-come-creare-una-piattaforma-di-javascript-of-anything "Etrusco's blog")
 
 Etrusco
 
