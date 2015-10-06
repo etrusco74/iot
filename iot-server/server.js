@@ -32,7 +32,7 @@ function setup() {
     console.log('Mosca server is up and running')
 }
 
-// fired whena  client is connected
+// fired when a client is connected
 server.on('clientConnected', function(client) {
     console.log('client connected', client.id);
 });
