@@ -1,31 +1,19 @@
+/* mosca server (mqtt) node.js
+*/
+
 var mosca = require('mosca');
 
-var pubsubsettings = {
-    type: 'mongo',
-    url: 'mongodb://etrusco:sandrino@ds033217.mongolab.com:33217/iot',
-    pubsubCollection: 'iotCollections',
-    mongo: {}
+var ascoltatore = {
+  //using ascoltatore
+  type: 'mongo',
+  url: 'mongodb://etrusco:sandrino@localhost:27017/test',
+  pubsubCollection: 'iot',
+  mongo: {}
 };
-var pubsubsettingsLocal = {
-    type: 'mongo',
-    url: 'mongodb://etrusco:sandrino@localhost/test',
-    pubsubCollection: 'iot',
-    mongo: {}
-};
-
-var persistencesettings = {
-    factory: mosca.persistence.Mongo,
-        url: 'mongodb://etrusco:sandrino@ds033217.mongolab.com:33217/iot'
-}
-var persistencesettingsLocal = {
-    factory: mosca.persistence.Mongo,
-        url: 'mongodb://etrusco:sandrino@localhost/test'
-}
 
 var settings = {
     port: 1883
-    //, backend: pubsubsettingsLocal
-    //, persistence: persistencesettingsLocal
+    , backend: ascoltatore
     , http: {
         port: 3000,
         bundle: true,
