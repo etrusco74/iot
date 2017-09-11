@@ -6,7 +6,7 @@ var mosca = require('mosca');
 var ascoltatore = {
   //using ascoltatore
   type: 'mongo',
-  url: 'mongodb://etrusco:sandrino@localhost:27017/test',
+  url: 'mongodb://test:test@localhost:27017/test',
   pubsubCollection: 'iot',
   mongo: {}
 };

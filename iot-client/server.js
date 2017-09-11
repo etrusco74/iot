@@ -9,7 +9,7 @@ var mqtt = require('mqtt');
 
 /* localhost on fuse */
 var client = mqtt.connect({
-    host: 'etrusco-lnx',
+    host: 'localhost',
     port: 1883,
     username: 'system',
     password: 'manager'
