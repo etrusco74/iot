@@ -29,7 +29,7 @@
     <bean class="com.mongodb.Mongo" id="myDb">
         <constructor-arg index="0">
             <bean class="com.mongodb.MongoURI">
-                <constructor-arg index="0" value="mongodb://etrusco:sandrino@localhost/test"/>
+                <constructor-arg index="0" value="mongodb://test:test@localhost/test"/>
             </bean>
         </constructor-arg>
     </bean>
