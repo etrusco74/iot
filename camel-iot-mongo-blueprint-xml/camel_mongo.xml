@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0">
+
+    <camelContext id="iot-mongo-route" xmlns="http://camel.apache.org/schema/blueprint">
+        <route id="mqtt-to-mongo-route">
+            <from id="listenIotMqttTopic1" uri="mqtt:iot?host=tcp://localhost:1883&amp;userName=system&amp;password=manager&amp;subscribeTopicName=iot/#"/>
+            <log id="logIotNewQueue" message="Read from topic iot: DONE!"/>
+            <convertBodyTo id="_convertBodyTo1" type="java.lang.String"/>
+            <to id="mongo" uri="mongodb:myDb?database=test&amp;collection=iot&amp;operation=insert" />
+        </route>
+        <route id="mqtt-to-file-route" streamCache="true">
+            <from id="listenIotMqttTopic2" uri="mqtt:iot?host=tcp://localhost:1883&amp;userName=system&amp;password=manager&amp;subscribeTopicName=iot/+/messages"/>
+            <log id="logIotQueueCountry" message="Consuming iot topic"/>
+            <to id="outputIotFolder" uri="file:work/out/iot"/>
+        </route>
+    </camelContext>
+
+    <bean id="myDb" class="com.mongodb.MongoClient">
+	<argument value="localhost" />
+	<argument value="27017" />
+    </bean>
+
+</blueprint>

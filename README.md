@@ -24,5 +24,18 @@ Using Apache Camel Boundle for persistency on mongoDB
 3. Client 2 (MQTT.js client)
 4. Client Web (MQTT.js client over websocket) 
 
+more info on [my blog](https://www.pensando.it/wp/tech/come-implementare-un-sistema-iot-con-redhat-jboss-fuse-node-js-e-mongodb "Etrusco's blog")
+
+## Apache Karaf broker and node.js client
+A mix IoT javascript example 
+Based on Apache Karaf 4.1.5 for mqtt broker, node.js for client app and websocket for webapp. 
+Using Apache Camel Blueprint XML Boundle for persistency on mongoDB
+
+1. Apache Camel (boundle for mongodb percistency using Apache Karaf)
+2. Client 1 (MQTT.js client)
+3. Client 2 (MQTT.js client)
+4. Client Web (MQTT.js client over websocket) 
+
+
 
 Etrusco
