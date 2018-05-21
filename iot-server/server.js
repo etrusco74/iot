@@ -13,7 +13,7 @@ var ascoltatore = {
 
 var settings = {
     port: 1883
-    , backend: ascoltatore
+    //, backend: ascoltatore
     , http: {
         port: 3000,
         bundle: true,
